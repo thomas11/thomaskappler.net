@@ -1,0 +1,128 @@
+body {
+  background-color: #fbfbfb;
+  font-family: Verdana, sans-serif;
+  font-size: 100%;
+  text-align: center;
+  margin: 1em;
+}
+
+.site {
+  max-width: 42em;
+  margin: 1em auto 2em auto;
+  line-height: 1.6em;
+  text-align: left;
+}
+
+.site h1 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-top: 1.4em;
+}
+.site h2 {
+    font-size: 1.3em;
+}
+.site h3,h4 {
+    font-size: 1.1em;
+}
+
+.site .abstract {
+    line-height: 1.4em;
+    font-size: 1.1em;
+    font-style: italic;
+    margin: 0 2em 2em 1.3em;
+}
+
+.site .date {
+    margin: 0.5em 0 0 0;
+}
+
+.site .article {
+    font-size: 1.1em;
+}
+
+code {
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    padding: 0 .2em;
+}
+pre {
+    border: 1px solid #ddd;
+    padding: .1em .4em;
+    background-color: #fefefe;
+    line-height: 1.4em;
+}
+pre code {
+    border: none;
+}
+
+a {
+  color: black;
+}
+a:visited {
+  color: #444;
+}
+
+.meta {
+  color: #444;
+}
+
+.site .header {
+  font-size: 0.8em;
+  border-bottom: solid lightgray 3px;
+  margin-bottom: 1.5em;
+  line-height: 2em;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header a:visited {
+  color: #444;
+}
+
+.header_categories {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.header_categories .category-sparkline {
+    border-bottom: 1px solid lightgray;
+    margin: 0 0 -2px 3px;
+}
+
+.header_categories a {
+  padding-right: 0.8em;
+}
+
+a.nav {
+    font-weight: bold;
+}
+.meta a.nav {
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+a.nav:hover {
+    color: #000;
+}
+
+.articlesummary {
+    margin-top: 1em;
+    line-height: 1.6em;
+    font-size: 1.1em;
+}
+.articlesummary a {
+    font-weight: bold;
+    text-decoration: none;
+}
+.articlesummary .date {
+    float:right;
+    font-size: 0.9em;
+    color: #444;
+}
+.articlesummary .blurb {
+    max-width: 40em;
+    font-size: 0.9em;
+    position: relative;
+    left: 2em;
+}

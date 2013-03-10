@@ -1,0 +1,13 @@
+{{define "content"}}
+
+{{range .Articles}}
+{{if not .Static}}
+  <div class="articlesummary">
+    <a href="/{{.Id}}.html">{{.Title}}</a> <span class="date">{{.FormatDateShort}}</span>
+    <!-- <span class="date">{{.FormatDateShort}}</span>&nbsp;&raquo; <a href="/{{.Id}}.html">{{.Title}}</a> -->
+    <div class="blurb">{{.Blurb}}</div>
+  </div>
+{{end}}
+{{end}}
+
+{{end}}

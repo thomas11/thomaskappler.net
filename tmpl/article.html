@@ -1,0 +1,13 @@
+{{define "content"}}
+
+<h1>{{.Title}}</h1>
+
+<div class="abstract">{{.Blurb}}
+{{if not .Static}}
+<div class="date">Published {{.FormatDate}}.</div>
+{{end}}
+</div>
+
+<div class="article">{{.RenderedBody}}</div>
+
+{{end}}
