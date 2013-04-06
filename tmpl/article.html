@@ -1,13 +1,14 @@
 {{define "content"}}
 
-<h1>{{.Title}}</h1>
+<h1 itemprop="headline">{{.Title}}</h1>
 
-<div class="abstract">{{.Blurb}}
-{{if not .Static}}
-<div class="date">Published {{.FormatDate}}.</div>
-{{end}}
+<div class="abstract">
+  <span itemprop="description">{{.Blurb}}</span>
+  {{if not .Static}}
+  <div class="date">Published <span itemprop="datePublished">{{.FormatDate}}</span>.</div>
+  {{end}}
 </div>
 
-<div class="article">{{.RenderedBody}}</div>
+<div class="article" itemprop="mainContentOfPage">{{.RenderedBody}}</div>
 
 {{end}}
