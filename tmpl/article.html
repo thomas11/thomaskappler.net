@@ -3,10 +3,11 @@
 <h1 itemprop="headline">{{.Title}}</h1>
 
 <div class="abstract">
-  <span itemprop="description">{{.Blurb}}</span>
   {{if not .Static}}
-  <div class="date">Published <span itemprop="datePublished">{{.FormatDate}}</span>.</div>
+    <span class="date">{{.FormatDateShort}}</span>&nbsp;&middot;&nbsp; 
   {{end}}
+  <span itemprop="description">{{.Blurb}}</span>
+  <!-- <div class="date">Published <span itemprop="datePublished">{{.FormatDate}}</span>.</div> -->
 </div>
 
 <div class="article" itemprop="mainContentOfPage">{{.RenderedBody}}</div>

@@ -21,14 +21,19 @@
 	<div class="site" itemscope itemtype="http://schema.org/WebPage">
 
 	  <div class="header meta">
+        <div>
 		<a href="/index.html" itemprop="author">Thomas Kappler</a>
-        &nbsp;&raquo;
+        <span class="sep">&raquo;</span>&nbsp;
 		<a href="/index.html" class="nav">Home</a>
-		<a href="/about.html" class="nav">About</a>
+		<span class="sep"> &middot; </span>
+        <a href="/about.html" class="nav">About</a>
+        </div>
 
 		<div class="header_categories">
-		  {{range .FrequentCategories}}
-		  <a href="/categories/{{.}}.html">{{.}}</a>
+          Topics <span class="sep">&raquo;</span>&nbsp; 
+		  {{range $i, $cat := .FrequentCategories}}
+		  {{if $i}}<span class="sep"> &middot; </span>{{end}}
+          <a href="/categories/{{$cat}}.html">{{$cat}}</a>
 		  {{end}}
 		</div>
 	  </div>

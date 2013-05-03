@@ -3,9 +3,9 @@
 {{range .Articles}}
 {{if not .Static}}
   <div class="articlesummary">
-    <a href="/{{.Id}}.html">{{.Title}}</a> <span class="date">{{.FormatDateShort}}</span>
-    <!-- <span class="date">{{.FormatDateShort}}</span>&nbsp;&raquo; <a href="/{{.Id}}.html">{{.Title}}</a> -->
-    <div class="blurb">{{.Blurb}}</div>
+    <h3><a href="/{{.Id}}.html">{{.Title}}</a></h3>
+    <div class="blurb"><span class="date">{{.FormatDateShort}}</span>
+    &nbsp;&middot;&nbsp; {{.Blurb}}</div>
   </div>
 {{end}}
 {{end}}
