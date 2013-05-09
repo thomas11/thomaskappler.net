@@ -17,8 +17,8 @@ var conf = blog11.SiteConf{
 	WritingFileDateStampFormat: "2006-01-02",
 	ImgOutDir:                  "img",
 	WritingDir:                 "../writing-markdown",
-	MaxArticlesOnIndex:         11,
-	OutDir:                     "out",
+	MaxArticlesOnIndex:         12,
+	OutDir:                     "thomas11.github.com",
 	TemplateDir:                "tmpl",
 }
 
