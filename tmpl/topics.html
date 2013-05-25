@@ -1,0 +1,22 @@
+{{define "content"}}
+
+<h1>Topics of this site</h1>
+
+<table>
+{{$topics := .}}
+{{range .ArticlesByCat}}
+<tr>
+  {{if ($topics.Eq (len .Articles) 1)}}
+    {{$article := index .Articles 0}}
+    <td>{{.Category}}</td>
+    <td>(<a href="/{{$article.Id}}.html">one article</a> on {{.EarliestDateFormatted}})</td>
+
+  {{else}}
+    <td><a href="/categories/{{.Category}}.html">{{.Category}}</a></td>
+    <td>({{len .Articles}} articles between {{.EarliestDateFormatted}} and {{.LatestDateFormatted}})</td>
+  {{end}}
+</tr>
+{{end}}
+</table>
+
+{{end}}
