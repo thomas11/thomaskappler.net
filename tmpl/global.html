@@ -6,7 +6,7 @@
 
 	<meta charset="utf-8" />
 
-	<link rel="alternate" type="application/atom+xml" title="RSS" href="{{.FileId}}.xml" />
+	{{if .FeedId}}<link rel="alternate" type="application/atom+xml" title="RSS" href="{{.FeedId}}.xml" />{{end}}
 	<link rel="author" type="text/html" title="About" href="/about.html" />
 	<link rel="stylesheet" href="/static/site.css" type="text/css" />
 
@@ -26,14 +26,14 @@
         <span class="sep">&raquo;</span>&nbsp;
 		<a href="/index.html" class="nav">Home</a>
 		<span class="sep"> &middot; </span>
-        <a href="/about.html" class="nav">About</a>
+        <a href="/about.html" class="nav{{if .IdIs "about"}} cur{{end}}">About</a>
         </div>
 
 		<div class="header_categories">
-          <a href="/topics.html">Topics</a> <span class="sep">&raquo;</span>&nbsp; 
-		  {{range $i, $cat := .FrequentCategories}}
+          <a href="/topics.html"{{if .IdIs "topics"}} class="cur"{{end}}>Topics</a> <span class="sep">&raquo;</span>&nbsp; 
+		  {{$tp := .}}{{range $i, $cat := .FrequentCategories}}
 		  {{if $i}}<span class="sep"> &middot; </span>{{end}}
-          <a href="/categories/{{$cat}}.html">{{$cat}}</a>
+          <a href="/categories/{{$cat}}.html"{{if $tp.IdIs $cat.String}} class="cur"{{end}}>{{$cat}}</a>
 		  {{end}}
 		</div>
 	  </div>
