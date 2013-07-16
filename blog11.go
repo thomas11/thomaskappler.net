@@ -8,18 +8,20 @@ import (
 const siteUrl = "http://www.thomaskappler.net/"
 
 var conf = blog11.SiteConf{
-	Author:                     "Thomas Kappler",
-	AuthorUri:                  siteUrl,
-	BaseUrl:                    siteUrl,
-	SiteTitle:                  "Thomas Kappler's site. Mostly programming and books.",
-	CategoriesOutDir:           "categories",
-	WritingFileExtension:       ".text",
-	WritingFileDateStampFormat: "2006-01-02",
-	ImgOutDir:                  "img",
-	WritingDir:                 "../writing-markdown",
-	MaxArticlesOnIndex:         10,
-	OutDir:                     "thomas11.github.com",
-	TemplateDir:                "tmpl",
+	Author:                       "Thomas Kappler",
+	AuthorUri:                    siteUrl,
+	BaseUrl:                      siteUrl,
+	SiteTitle:                    "Thomas Kappler's site. Mostly programming and books.",
+	CategoriesOutDir:             "categories",
+	WritingFileExtension:         ".text",
+	WritingFileDateStampFormat:   "2006-01-02",
+	ImgOutDir:                    "img",
+	WritingDir:                   "../writing-markdown",
+	OutDir:                       "thomas11.github.com",
+	TemplateDir:                  "tmpl",
+	MaxArticlesOnIndex:           10,
+	NumFreqCategories:            6,
+	MinArticlesForFreqCategories: 2,
 }
 
 func main() {
