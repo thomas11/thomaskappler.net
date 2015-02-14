@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/thomas11/blog11"
 	"log"
+	"time"
 )
 
 const siteUrl = "http://www.thomaskappler.net/"
@@ -22,6 +23,7 @@ var conf = blog11.SiteConf{
 	MaxArticlesOnIndex:           10,
 	NumFreqCategories:            5,
 	MinArticlesForFreqCategories: 2,
+	MaxAgeForFreqCategories:      time.Hour * 24 * 365 * 3,
 }
 
 func main() {
