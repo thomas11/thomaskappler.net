@@ -20,7 +20,7 @@ var conf = blog11.SiteConf{
 	OutDir:                       "thomas11.github.com",
 	TemplateDir:                  "tmpl",
 	MaxArticlesOnIndex:           10,
-	NumFreqCategories:            6,
+	NumFreqCategories:            5,
 	MinArticlesForFreqCategories: 2,
 }
 
