@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 	<title>{{.PageTitle}}</title>
 
-	<meta charset="utf-8" />
-
-	{{if .FeedId}}<link rel="alternate" type="application/atom+xml" title="RSS" href="{{.FeedId}}.xml" />{{end}}
+	<meta charset="utf-8" /> {{if .FeedId}}
+	<link rel="alternate" type="application/atom+xml" title="RSS" href="{{.FeedId}}.xml" />{{end}}
 	<link rel="author" type="text/html" title="About" href="/about.html" />
 	<link rel="stylesheet" href="/static/site.css" type="text/css" />
+</head>
 
-	<!-- http://softwaremaniacs.org/soft/highlight/en/description/ -->
-	<!-- <link rel="stylesheet" href="/static/highlight/styles/magula.css"> -->
-	<!-- <script src="/static/highlight/highlight.pack.js"></script> -->
-	<!-- <script>hljs.initHighlightingOnLoad();</script> -->
-  </head>
-
-  <body>
+<body>
 
 	<div class="site" itemscope itemtype="http://schema.org/WebPage">
 
-	  <div class="header meta">
-        <div>
-		<a href="/index.html" itemprop="author">Thomas Kappler</a>
-        <span class="sep">&raquo;</span>&nbsp;
-		<a href="/index.html" class="nav">Home</a>
-		<span class="sep"> &middot; </span>
-        <a href="/about.html" class="nav{{if .IdIs "about"}} cur{{end}}">About</a>
-        </div>
+		<div class="header meta">
+			<div>
+				<a href="/index.html" itemprop="author">Thomas Kappler</a>
+				<span class="sep">&raquo;</span>&nbsp;
+				<a href="/index.html" class="nav">Home</a>
+				<span class="sep"> &middot; </span>
+				<a href="/about.html" class="nav{{if .IdIs " about "}} cur{{end}}">About</a>
+				<span class="sep"> &middot; </span>
+				<a href="/topics.html" class="nav{{if .IdIs " topics "}} cur{{end}}">Posts by Topic</a>
+			</div>
 
-		<div class="header_categories">
-          <a href="/topics.html"{{if .IdIs "topics"}} class="cur"{{end}}>Topics</a> <span class="sep">&raquo;</span>&nbsp; 
-		  {{$tp := .}}{{range $i, $cat := .FrequentCategories}}
-		  {{if $i}}<span class="sep"> &middot; </span>{{end}}
-          <a href="/categories/{{$cat}}.html"{{if $tp.IdIs $cat.String}} class="cur"{{end}}>{{$cat}}</a>
-		  {{end}}
+			{{if (len .FrequentCategories)}}
+			<div class="header_categories">
+				<a href="/topics.html" {{if .IdIs "topics"}} class="cur" {{end}}>Recent Topics</a>
+				<span class="sep">&raquo;</span>
+				&nbsp; {{$tp := .}}
+				{{range $i, $cat := .FrequentCategories}}
+				  {{if $i}}<span class="sep"> &middot; </span>{{end}}
+				  <a href="/categories/{{$cat}}.html" {{if $tp.IdIs $cat.String}} class="cur" {{end}}>{{$cat}}</a>
+				{{end}}
+			</div>
+			{{end}}
 		</div>
-	  </div>
 
-	  {{template "content" .}}
-	  
+		{{template "content" .}}
+
 	</div>
-  </body>
+</body>
+
 </html>

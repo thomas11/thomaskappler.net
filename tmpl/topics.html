@@ -4,16 +4,14 @@
 
 <table>
 {{$topics := .}}
-{{range .ArticlesByCat}}
+{{range .PostsByCategory}}
 <tr>
-  {{if ($topics.Eq (len .Articles) 1)}}
-    {{$article := index .Articles 0}}
-    <td>{{.Category}}</td>
-    <td>(<a href="/{{$article.Id}}.html">one article</a> on {{.EarliestDateFormatted}})</td>
-
+  <td><a href="/categories/{{.Category.Id}}.html">{{.Category}}</a></td>
+  {{if ($topics.Eq (len .Posts) 1)}}
+    {{$post := index .Posts 0}}
+    <td>(<a href="/{{$post.Id}}.html">one post</a> on {{.EarliestDateFormatted}})</td>
   {{else}}
-    <td><a href="/categories/{{.Category}}.html">{{.Category}}</a></td>
-    <td>({{len .Articles}} articles between {{.EarliestDateFormatted}} and {{.LatestDateFormatted}})</td>
+    <td>({{len .Posts}} posts between {{.EarliestDateFormatted}} and {{.LatestDateFormatted}})</td>
   {{end}}
 </tr>
 {{end}}
