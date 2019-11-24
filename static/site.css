@@ -142,3 +142,8 @@ pre code {
     vertical-align: bottom;
     padding: 0.5em 1em 0.5em 0;
 }
+
+table td {
+  padding-right: 3em;
+  vertical-align: top;
+}
