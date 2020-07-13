@@ -5,9 +5,9 @@
 {{end}}
 
 {{range .Posts}}
-{{if not .Static}}
+{{if not .IsStatic}}
   <div class="articlesummary">
-    <h3><a href="/{{.Id}}.html">{{.Title}}</a></h3>
+    <h3><a href="/{{.ID}}.html">{{.Title}}</a></h3>
     <div class="blurb"><span class="date">{{.FormatDateShort}}</span>
     &nbsp;&middot;&nbsp; {{.Blurb}}</div>
   </div>

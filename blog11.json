@@ -1,0 +1,14 @@
+{
+    "Author":                          "Thomas Kappler",
+	"AuthorURI":                       "http://www.thomaskappler.net/",
+	"BaseURL":                         "http://www.thomaskappler.net/",
+	"SiteTitle":                       "Thomas Kappler's site. Mostly programming and books.",
+	"WritingFileExtension":            ".text",
+	"WritingFileDateStampFormat":      "2006-01-02",
+	"WritingDir":                      "../writing",
+	"OutDir":                          "../thomas11.github.com",
+	"MaxArticlesOnIndex":              20,
+	"NumFreqCategories":               5,
+	"MinArticlesForFreqCategories":    2,
+	"MaxAgeForFreqCategoriesInMonths": 48
+}

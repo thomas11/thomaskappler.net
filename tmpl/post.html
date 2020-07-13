@@ -3,7 +3,7 @@
 <h1 itemprop="headline">{{.Title}}</h1>
 
 <div class="abstract">
-  {{if not .Static}}
+  {{if not .IsStatic}}
     <span class="date">{{.FormatDateShort}}</span>&nbsp;&middot;&nbsp; 
   {{end}}
   <span itemprop="description">{{.Blurb}}</span>

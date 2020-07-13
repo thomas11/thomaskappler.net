@@ -9,7 +9,7 @@
   <td><a href="/categories/{{.Category.Id}}.html">{{.Category}}</a></td>
   {{if ($topics.Eq (len .Posts) 1)}}
     {{$post := index .Posts 0}}
-    <td>(<a href="/{{$post.Id}}.html">one post</a> on {{.EarliestDateFormatted}})</td>
+    <td>(<a href="/{{$post.ID}}.html">one post</a> on {{.EarliestDateFormatted}})</td>
   {{else}}
     <td>({{len .Posts}} posts between {{.EarliestDateFormatted}} and {{.LatestDateFormatted}})</td>
   {{end}}
