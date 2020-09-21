@@ -7,7 +7,7 @@
 	"WritingFileDateStampFormat":      "2006-01-02",
 	"WritingDir":                      "../writing",
 	"OutDir":                          "../thomas11.github.com",
-	"MaxArticlesOnIndex":              20,
+	"MaxArticlesOnIndex":              12,
 	"NumFreqCategories":               5,
 	"MinArticlesForFreqCategories":    2,
 	"MaxAgeForFreqCategoriesInMonths": 48
